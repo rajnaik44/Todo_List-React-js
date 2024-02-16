@@ -74,7 +74,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto my-5 rounded-xl p-5 bg-violet-100 min-h-[80vh] w-1/2">
+      <div className="mx-3 md:container md:mx-auto my-5 rounded-xl p-5 bg-violet-100 min-h-[80vh] md:w-1/2">
       <h1 className="font-bold text-center text-xl">iTask - Manage Your Todos At One Place</h1>
         <div className="addTodo my-5 flex flex-col gap-2">
           <h2 className="text-lg font-bold">Add a Todo</h2>
@@ -87,7 +87,7 @@ function App() {
           <button
           disabled={todo.length < 3}
             onClick={handleAdd}
-            className="bg-violet-800 disabled:bg-violet-300 hover:bg-violet-900 p-2 py-1 text-sm font-bold text-white rounded-md mt-3"
+            className="bg-violet-800 disabled:bg-violet-300 hover:bg-violet-900 p-2 py-1 text-sm font-bold text-white rounded-full mt-3"
           >
             Add
           </button>
@@ -101,7 +101,7 @@ function App() {
             return (showFinished || !item.isCompleted) && (
               <div
                 key={item.id}
-                className={"todo flex w-2/3 justify-between my-2"}
+                className={"todo flex md:w-3/4 justify-between my-3"}
               >
                 <div className="flex gap-5">
                   <input
